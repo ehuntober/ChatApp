@@ -26,6 +26,14 @@ const storage = multer.diskStorage({
     }
 });
 
+
+const upload = multer({storage:storage});
+
+const userController = require('../controllers/userController')
+
+
+user_route.get('/register', userController.registerLoad);
+user_route.post('/register',);
 module.exports= user_route;
 
 
